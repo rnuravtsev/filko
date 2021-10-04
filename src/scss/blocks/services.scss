@@ -1,0 +1,122 @@
+.services__list {
+  @include reset-list();
+}
+
+.services__item {
+  border-bottom: 1px solid $secondary;
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.services__link {
+  padding: 40px;
+  display: block;
+  height: 100%;
+  color: $white;
+  background-color: $primary-light;
+  &:hover {
+    color: $secondary;
+    text-decoration: none;
+  }
+}
+
+.services__decor {
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  transition: $transition-default;
+}
+
+.services__icon {
+  width: 40px;
+  height: 40px;
+  fill: $secondary;
+}
+
+.services__subtitle {
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (max-width: 991.98px) {
+  .services__item {
+    //border-right: 1px solid $secondary;
+    &:nth-child(2n) {
+      border-right: 0;
+    }
+    &:nth-last-child(-n+2) {
+      border-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .services__decor {
+    width: 90px;
+    height: 90px;
+  }
+
+  .services__icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (min-width: $laptop) {
+  .services__item {
+    border-right: 1px solid $secondary;
+    &:first-child {
+      .services__link {
+        border-radius: 5px 0 0 0;
+      }
+    }
+    &:nth-child(3) {
+      .services__link {
+        border-radius: 0 5px 0 0;
+      }
+    }
+    &:nth-child(4) {
+      .services__link {
+        border-radius: 0 0 0 5px;
+      }
+    }
+    &:nth-child(6) {
+      .services__link {
+        border-radius: 0 0 5px 0;
+      }
+    }
+    &:nth-child(3n) {
+      border-right: 0;
+    }
+    &:nth-last-child(-n+3) {
+      border-bottom: 0;
+    }
+  }
+  .services__link {
+    color: $white;
+    background-color: $primary-light;
+    &:hover {
+      color: $white;
+      background-color: $secondary;
+      .services__decor {
+        background-color: $white;
+      }
+      .services__icon {
+        fill: $primary-light;
+        transition: $transition-default;
+      }
+    }
+  }
+
+  .services__decor {
+    background-color: transparent;
+  }
+}

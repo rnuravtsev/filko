@@ -1,0 +1,17 @@
+.consumers {
+  position: relative;
+}
+
+.consumers__slider {
+  @include reset-list();
+  display: flex;
+  align-items: center;
+}
+
+
+@media (min-width: $laptop) {
+  .consumers__image {
+    max-width: 800px;
+    max-height: 300px;
+  }
+}

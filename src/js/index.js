@@ -1,6 +1,6 @@
-import 'popper.js'
-import 'bootstrap/dist/js/bootstrap.min'
-import Inputmask from 'inputmask/lib/inputmask'
+import 'nodeModules/popper.js'
+import 'nodeModules//bootstrap/dist/js/bootstrap.min'
+import Inputmask from 'nodeModules/inputmask/lib/inputmask'
 
 import submitForm from './modules/submitForm'
 import validateForm from './modules/validateForm'
@@ -12,7 +12,7 @@ import 'swiper/components/pagination/pagination.scss'
 import '../scss/style.scss'
 
 import createDefaultSwiper from './modules/slider'
-import customScroll from './utils'
+import { customScroll } from './utils'
 import customCollapse from './modules/customCollapse'
 
 document.querySelectorAll('a[href^="#"]').forEach((el) => {

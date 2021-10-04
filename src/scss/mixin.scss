@@ -1,0 +1,33 @@
+@mixin reset-list(){
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin font-18-26-700(){
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+@mixin font-21-26-700(){
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+@mixin link(){
+  color: $secondary;
+  text-decoration: underline;
+}
+
+@mixin link-hover(){
+  color: $secondary;
+  opacity: $opacity-default;
+  text-decoration: none;
+}
+
+@mixin focus(){
+  //outline: 0.5px solid $focus;
+  box-shadow: 0 0 0 .2rem rgba(0,123,255,.5);
+}

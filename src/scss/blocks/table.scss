@@ -1,0 +1,13 @@
+.table {
+  color: #fff;
+}
+
+.table-secondary {
+  border-color: $secondary;
+}
+
+.thead-secondary {
+  color: $white;
+  background-color: $secondary;
+  border-color: $secondary;
+}

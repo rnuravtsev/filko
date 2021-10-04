@@ -1,0 +1,38 @@
+.social {
+  @include reset-list();
+  display: flex;
+}
+
+.social__item {
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__icon {
+  fill: $secondary;
+  &--vk {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (min-width: $laptop) {
+  .social__icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    &:hover {
+      opacity: $opacity-default;
+      transition: $transition-default;
+    }
+    &--vk {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.custom-collapse {
+  background-color: $primary-light;
+  border-radius: 10px;
+}
+
+.custom-collapse__subtitle {
+  padding: 16px;
+  margin-bottom: 0;
+}
+
+.custom-collapse__button {
+  padding: 0.4rem;
+  background-color: $primary;
+  border-radius: 50%;
+}
+
+.custom-collapse__content {
+  margin-top: 20px;
+  transition: $transition-default;
+}
+
+.custom-collapse__content:not(.show) {
+  display: none;
+}
+
+.custom-collapse__icon {
+  transition: $transition-default;
+  transform: rotate(0deg);
+  will-change: transform;
+  fill: $secondary;
+}
+
+.custom-collapse__icon.show {
+  transform: rotate(180deg);
+}

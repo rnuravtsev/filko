@@ -9,6 +9,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin')
 
 const environment = require('./configuration/environment');
 
@@ -110,6 +111,14 @@ module.exports = {
           },
         },
       ],
+    }),
+    new SVGSpritemapPlugin('./src/images/sprite/*.svg', {
+      output: {
+        filename: 'images/sprite.svg',
+      },
+      sprite: {
+        prefix: 'sprite-',
+      },
     }),
   ].concat(htmlPluginEntries),
   target: 'web',

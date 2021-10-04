@@ -1,0 +1,64 @@
+.header-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.page-header {
+  width: 100%;
+  min-height: 65px;
+  background-color: $white;
+  z-index: 9999;
+  &__icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+  }
+
+  &__link {
+    font-size: 13px;
+    @include link();
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+}
+
+@media (min-width: 360px) {
+  .page-header__link {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .page-header__link {
+    font-size: 14px;
+    text-transform: none;
+  }
+}
+
+@media (min-width: $laptop) {
+  .page-header__link {
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: $desktop) {
+  .page-header {
+    min-height: 95px;
+
+    &__logo {
+      height: 75px;
+    }
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

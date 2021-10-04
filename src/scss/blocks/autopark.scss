@@ -1,0 +1,19 @@
+.autopark__slider {
+    display: flex;
+    align-items: center;
+}
+
+.autopark__list {
+  @include reset-list();
+}
+
+.autopark__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.autopark__image {
+  display: block;
+  margin: 0 auto;
+}

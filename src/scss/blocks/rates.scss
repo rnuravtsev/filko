@@ -1,0 +1,46 @@
+.rates__table {
+  position: relative;
+  margin-bottom: 0;
+  background-color: $primary;
+  border: 0;
+  border-spacing: 0;
+  border-collapse: separate;
+  td {
+    border-color: $secondary;
+  }
+  tbody {
+    tr:first-child,
+    tr:nth-child(2) {
+      td:first-child, {
+        border-left: 1px solid $secondary;
+      }
+      td:last-child {
+        border-right: 1px solid $secondary;
+      }
+      td {
+        border-color: $primary;
+      }
+    }
+    tr:nth-child(3) {
+      td {
+        border-top: 0;
+      }
+    }
+  }
+}
+
+.rates__tr {
+  &--sticky {
+    position: sticky;
+    td {
+      background-color: $secondary;
+      color: $primary;
+    }
+  }
+  &--top-less {
+    top: 0px;
+  }
+  &--top-more {
+    top: 49px;
+  }
+}

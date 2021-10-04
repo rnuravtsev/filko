@@ -6,6 +6,7 @@
     "jquery": true
   },
   "rules": {
+    "semi": ["error", "never"],
     "no-use-before-define": 0,
     "func-names": 0,
     "prefer-arrow-callback": 0,
@@ -23,8 +24,9 @@
     "import/extensions": 0
   },
   "globals": {
-    "browser": false,
+    "browser": true,
     "window": true,
-    "document": true
+    "document": true,
+    "fetch": true
   }
 }
