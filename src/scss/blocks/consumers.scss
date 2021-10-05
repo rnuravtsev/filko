@@ -8,10 +8,8 @@
   align-items: center;
 }
 
-
-@media (min-width: $laptop) {
-  .consumers__image {
-    max-width: 800px;
+.consumers__image {
+  &--danone {
     max-height: 300px;
   }
 }
