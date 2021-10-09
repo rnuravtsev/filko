@@ -4,6 +4,7 @@
 }
 
 .custom-collapse__subtitle {
+  font-size: 18px;
   padding: 16px;
   margin-bottom: 0;
 }
@@ -24,12 +25,24 @@
 }
 
 .custom-collapse__icon {
+  fill: $secondary;
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.custom-collapse__icon--expand {
   transition: $transition-default;
   transform: rotate(0deg);
   will-change: transform;
-  fill: $secondary;
 }
 
-.custom-collapse__icon.show {
+.custom-collapse__icon--expand.show {
   transform: rotate(180deg);
+}
+
+@media (min-width: $tablet) {
+  .custom-collapse__subtitle {
+    font-size: 1.25rem;
+  }
 }

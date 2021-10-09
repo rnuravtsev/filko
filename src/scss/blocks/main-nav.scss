@@ -20,6 +20,9 @@
 }
 
 @media (min-width: $tablet) {
+  .main-nav__list {
+    flex-direction: row;
+  }
   .main-nav__item {
     border: 0;
     margin-right: 10px;

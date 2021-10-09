@@ -2,19 +2,19 @@
  * Webpack main configuration file
  */
 
-const path = require('path');
-const fs = require('fs');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const path = require('path')
+const fs = require('fs')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin')
 
-const environment = require('./configuration/environment');
+const environment = require('./configuration/environment')
 
 const templateFiles = fs.readdirSync(environment.paths.source)
-  .filter((file) => path.extname(file).toLowerCase() === '.html');
+  .filter((file) => path.extname(file).toLowerCase() === '.html')
 
 const htmlPluginEntries = templateFiles.map((template) => new HTMLWebpackPlugin({
   inject: true,
@@ -22,7 +22,7 @@ const htmlPluginEntries = templateFiles.map((template) => new HTMLWebpackPlugin(
   filename: template,
   template: path.resolve(environment.paths.source, template),
   favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
-}));
+}))
 
 module.exports = {
   entry: {
@@ -103,6 +103,18 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
+          from: path.resolve(environment.paths.source, 'docs'),
+          to: path.resolve(environment.paths.output, 'docs'),
+          toType: 'dir',
+          globOptions: {
+            ignore: ['*.DS_Store', 'Thumbs.db'],
+          },
+        },
+      ],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
           from: path.resolve(environment.paths.source, 'images', 'content'),
           to: path.resolve(environment.paths.output, 'images', 'content'),
           toType: 'dir',
@@ -122,4 +134,4 @@ module.exports = {
     }),
   ].concat(htmlPluginEntries),
   target: 'web',
-};
+}
