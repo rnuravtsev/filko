@@ -6,22 +6,25 @@
   @include reset-list();
 }
 
-.about__item {
-  border-right: $border-secondary;
-  border-bottom: $border-secondary;
-
-  &:nth-child(3n) {
-    border-right: 0;
-    border-bottom: 0;
-  }
-
-  &:nth-last-child(-n+2) {
-    border-bottom: 0;
-  }
-}
-
 .about__text {
   text-align: justify;
+}
+
+@media (min-width: $tablet) {
+  .about__item {
+    border: 0;
+    border-right: $border-secondary;
+    border-bottom: $border-secondary;
+
+    &:nth-child(3n) {
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    &:nth-last-child(-n+2) {
+      border-bottom: 0;
+    }
+  }
 }
 
 @media (min-width: $laptop) {

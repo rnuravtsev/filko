@@ -1,12 +1,11 @@
 .map {
   position: relative;
   display: block;
-  border-radius: 10px;
+  border-radius: 5px;
   transition: transform .25s ease;
   &:hover {
     transform: scale(1.05);
   }
-  //background-image: url("../../img/bg-map.jpg");
 }
 
 .map__iframe {

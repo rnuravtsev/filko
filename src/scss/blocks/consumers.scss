@@ -1,5 +1,6 @@
 .consumers {
   position: relative;
+  margin-bottom: 30px;
 }
 
 .consumers__slider {
@@ -11,5 +12,11 @@
 .consumers__image {
   &--danone {
     max-height: 300px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .consumers {
+    margin-bottom: auto;
   }
 }

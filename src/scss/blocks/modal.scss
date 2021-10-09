@@ -3,11 +3,7 @@
   max-width: 600px;
   height: auto;
   background-color: $primary;
-}
-
-// Временно
-.fancybox__slide {
-  padding: 0 !important;
+  overflow: auto;
 }
 
 .modal__title {
@@ -33,4 +29,8 @@
 // Чтобы swal мог перекрывать, установим z-index > 1030 x < 10000
 .fancybox-container.fancybox-is-open {
   z-index: 1040;
+}
+
+.modal.cookie-agreement-content {
+  padding: 50px 15px;
 }

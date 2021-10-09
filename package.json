@@ -87,6 +87,7 @@
     "bootstrap": "4.6.0",
     "inputmask": "5.0.6",
     "jquery": "3.6.0",
+    "js-cookie": "3.0.1",
     "popper.js": "1.16.1",
     "svgo": "2.4.0",
     "sweetalert": "2.1.2",

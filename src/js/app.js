@@ -14,6 +14,7 @@ import '../scss/style.scss'
 import createDefaultSwiper from './modules/slider'
 import customScroll from './utils'
 import customCollapse from './modules/customCollapse'
+import cookie from './modules/cookie'
 
 document.querySelectorAll('a[href^="#"]').forEach((el) => {
   el.addEventListener('click', function (evt) {
@@ -42,4 +43,5 @@ document.addEventListener('DOMContentLoaded', () => {
   submitForm()
   validateForm()
   customCollapse()
+  cookie()
 })
