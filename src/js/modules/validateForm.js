@@ -1,11 +1,16 @@
 const validateForm = () => {
-  const callbackForm = document.querySelector('.form--callback')
   const inputName = document.querySelector('.form__input--name')
   const inputPhone = document.querySelector('.form__input--phone')
   const inputAgree = document.querySelector('.form__input--checkbox')
   const buttonSubmit = document.querySelector('.modal__button--submit')
   const smallTextName = document.querySelector('.form-text--name')
   const smallTextPhone = document.querySelector('.form-text--phone')
+
+  const formState = {
+    name: false,
+    phone: false,
+    agree: false,
+  }
 
   const setButtonSubmitDisabled = () => {
     buttonSubmit.classList.add('disabled')
@@ -25,21 +30,20 @@ const validateForm = () => {
     element.classList.remove('visually-hidden')
   }
 
-  const formState = {
-    name: false,
-    phone: false,
-    agree: false,
+  const checkForm = () => {
+    const { phone, name, agree } = formState
+    if (phone && name && agree) {
+      setButtonSubmitNotDisabled()
+    } else {
+      setButtonSubmitDisabled()
+    }
   }
-
-  setButtonSubmitDisabled()
 
   inputAgree.addEventListener('change', (evt) => {
     const { target } = evt
-    if (target.checked) {
-      formState.agree = true
-    } else {
-      formState.agree = false
-    }
+    formState.agree = !!target.checked
+
+    checkForm()
   })
 
   inputName.addEventListener('input', (evt) => {
@@ -51,6 +55,8 @@ const validateForm = () => {
       formState.name = false
       showSmallText(smallTextName)
     }
+
+    checkForm()
   })
 
   inputPhone.addEventListener('input', (evt) => {
@@ -63,15 +69,8 @@ const validateForm = () => {
       formState.phone = false
       showSmallText(smallTextPhone)
     }
-  })
 
-  callbackForm.addEventListener('change', () => {
-    const { phone, name, agree } = formState
-    if (phone && name && agree) {
-      setButtonSubmitNotDisabled()
-    } else {
-      setButtonSubmitDisabled()
-    }
+    checkForm()
   })
 }
 
