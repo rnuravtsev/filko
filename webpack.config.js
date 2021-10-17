@@ -10,6 +10,7 @@ const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin')
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin')
 
 const environment = require('./configuration/environment')
 
@@ -95,6 +96,9 @@ module.exports = {
           ],
         ],
       },
+    }),
+    new ImageminWebpWebpackPlugin({
+
     }),
     new CleanWebpackPlugin({
       verbose: true,
