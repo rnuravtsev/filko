@@ -13,7 +13,6 @@ import '../scss/style.scss'
 
 import createDefaultSwiper from './modules/slider'
 import customScroll from './utils'
-import customCollapse from './modules/customCollapse'
 import cookie from './modules/cookie'
 
 document.querySelectorAll('a[href^="#"]').forEach((el) => {
@@ -42,6 +41,5 @@ document.addEventListener('DOMContentLoaded', () => {
   Inputmask({ mask: '+7(999)999-99-99' }).mask('.form__input--phone')
   submitForm()
   validateForm()
-  customCollapse()
   cookie()
 })
