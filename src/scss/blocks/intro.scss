@@ -3,9 +3,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 87vh;
+  height: calc(100vh - $mobile-header-height);
   color: $white;
-  background-image: url('../images/design/intro-man-truck.jpg');
+  background-image: url('../images/design/intro-man-truck.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -71,6 +71,9 @@
 }
 
 @media (min-width: $desktop) {
+  .intro {
+    height: calc(100vh - $desktop-header-height);
+  }
   .intro__title {
     font-size: 45px;
     margin-bottom: 30px;

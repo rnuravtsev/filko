@@ -10,8 +10,9 @@
 }
 
 .consumers__image {
-  &--danone {
-    max-height: 300px;
+  &--danone,
+  &--akashevo {
+    max-height: 200px;
   }
 }
 

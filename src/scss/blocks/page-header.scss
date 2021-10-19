@@ -9,7 +9,7 @@
 
 .page-header {
   width: 100%;
-  min-height: 65px;
+  min-height: $mobile-header-height;
   background-color: $white;
   z-index: 9999;
   &__icon {
@@ -21,6 +21,7 @@
   &__link {
     font-size: 13px;
     @include link();
+    color: $primary-light;
     &:hover {
       color: $primary;
       text-decoration: none;
@@ -50,7 +51,7 @@
 
 @media (min-width: $desktop) {
   .page-header {
-    min-height: 95px;
+    min-height: $desktop-header-height;
 
     &__logo {
       height: 75px;
