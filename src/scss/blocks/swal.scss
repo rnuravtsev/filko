@@ -1,0 +1,27 @@
+//swal
+
+.swal2-confirm.swal2-styled {
+  background-color: $secondary;
+  &:hover,
+  &:not([disabled]):hover {
+    background-color: $secondary;
+    opacity: $opacity-default;
+  }
+}
+
+.swal2-title {
+  font-size: 1.375em;
+}
+
+.swal2-html-container {
+  font-size: 1.105em;
+}
+
+@media (min-width: $tablet) {
+  .swal2-title {
+    font-size: 1.875em;
+  }
+  .swal2-html-container {
+    font-size: 1.125em;
+  }
+}

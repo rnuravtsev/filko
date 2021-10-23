@@ -13,7 +13,7 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/85771986" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <div class="fill fill--white w-100 header-wrapper">
     <header
-            class="page-header container page-header__nav main-nav navbar navbar-expand-lg align-items-center justify-content-between">
+            class="page-header container page-header__nav main-nav navbar navbar-expand-xl align-items-center justify-content-between">
         <img class="page-header__logo logo" src="images/content/logo-filco.svg" alt="Логотип компании Filko">
         <div class="d-none d-lg-flex align-items-center">
             <svg class="page-header__icon page-header__icon--phone" width="20" height="20">
@@ -87,7 +87,7 @@
 </div>
 <div class="container">
     <section class="about section row" id="about">
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-5">
             <h2 class="about__title title title--section">О компании</h2>
             <p class="about__text">
                 На сегодняшний день ООО "Филко" является динамичной и стабильно развивающейся транспортно-экспедиционной
@@ -97,7 +97,7 @@
             </p>
             <p class="about__text">
                 Наш собственный автопарк насчитывает 60 малотоннажных автомобилей (от 2019 до 2021 г.выпуска) объемом
-                кузова до 56м<sup>3</sup>,
+                кузова до 56м<sup>3</sup>,&ensp;
                 который регулярно обновляется.
             </p>
             <p class="about__text">
@@ -105,7 +105,7 @@
                 до клиентов за счет ежедневных отгрузок.
             </p>
         </div>
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-7">
             <ul class="about__list row no-gutters">
                 <li class="about__item col-6 col-md-4 order-1 order-md-1">
                     <div class="about__decor decor">
@@ -399,7 +399,7 @@
                     <p class="page-footer__text">2019-2021 @Filko</p>
                 </div>
                 <div class="col-auto">
-                    <a class="page-footer__link" href="#">Политика конфиденциальности</a>
+                    <a class="page-footer__link" href="./docs/privacy.pdf" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
                 </div>
                 <div class="col-12 col-md-auto d-flex align-items-center justify-content-center">
                     <ul class="contacts__social social row no-gutters">
@@ -460,7 +460,7 @@
                     </ul>
                 </div>
                 <div class="col-auto">
-                    <a class="page-footer__link" href="#">Политика конфиденциальности</a>
+                    <a class="page-footer__link" href="./docs/privacy.pdf" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
                 </div>
             </div>
             <hr class="page-footer__hr"/>
@@ -487,7 +487,7 @@
         <div class="form-group form__form-group">
             <label class="visually-hidden" for="customerPhone">Ваш телефон</label>
             <input class="form__input form__input--phone form-control" id="customerPhone" type="tel"
-                   name="customerPhone" placeholder="Введите ваш номер телефона" required pattern="\+?[0-9\s\-\(\)]+">
+                   name="customerPhone" placeholder="Введите ваш номер телефона" required pattern="\+?[0-9\s\-\(\)]+" inputmode="numeric">
             <small class="form-text form-text--phone text-muted">Введите телефон в соответсвие с шаблоном</small>
         </div>
         <div class="form-check">
@@ -498,8 +498,8 @@
                 Я даю согласие на обработку персональных данных
             </label>
         </div>
-        <div class="form-group">
-            <a class="form__link" href="#">Политика конфиденциальности</a>
+        <div class="form-group text-center text-md-left">
+            <a class="form__link" href="./docs/privacy.pdf" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
         </div>
         <button class="modal__button modal__button--submit btn btn-secondary diasbled" type="submit" disabled>Заказать звонок</button>
     </form>

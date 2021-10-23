@@ -59,18 +59,7 @@
   "engines": {
     "node": "^12 || >=14"
   },
-  "keywords": [
-    "webpack",
-    "boilerplate",
-    "template",
-    "setup"
-  ],
-  "license": "MIT",
   "private": false,
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:WeAreAthlon/frontend-webpack-boilerplate.git"
-  },
   "scripts": {
     "build": "webpack --config configuration/webpack.dev.config.js --mode=development",
     "watch": "webpack --config configuration/webpack.dev.config.js --mode=development --watch",
@@ -91,7 +80,7 @@
     "js-cookie": "3.0.1",
     "popper.js": "1.16.1",
     "svgo": "2.4.0",
-    "sweetalert": "2.1.2",
+    "sweetalert2": "11.1.9",
     "swiper": "6.8.2",
     "throttle-debounce": "3.0.1"
   }

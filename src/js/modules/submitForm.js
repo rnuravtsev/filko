@@ -1,4 +1,4 @@
-import swal from 'sweetalert'
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 import { Fancybox } from '@fancyapps/ui/src/Fancybox/Fancybox'
 import { throttle } from 'throttle-debounce'
 
@@ -19,45 +19,44 @@ const submitForm = () => {
       throw new Error(e)
     }
   }
-  callbackForm.addEventListener('submit', throttle(1000, false, async (evt) => {
+
+  const callbackFormSubmitHandler = async (evt) => {
     evt.preventDefault()
     const formData = new window.FormData(callbackForm)
     const plainFormData = Object.fromEntries(formData.entries())
     const formDataJsonString = JSON.stringify(plainFormData)
 
+    callbackForm.reset()
+    Fancybox.close()
+
     const showAlert = async (options) => {
-      const { title, message, responseType } = options
       buttonSubmit.classList.remove('modal__button--loading')
-      await swal(title, message, responseType)
+      await Swal.fire({
+        ...options,
+      })
     }
 
     buttonSubmit.classList.add('modal__button--loading')
 
-    try {
-      const response = await postData('./form.php', formDataJsonString)
-      if (response.ok) {
-        await showAlert({
-          title: 'Yes',
-          message: 'Мы скоро вам перезвоним',
-          responseType: 'success',
-        })
-        callbackForm.reset()
-        Fancybox.close()
-      } else {
-        await showAlert({
-          title: 'Ouch',
-          message: 'Something goes wrong!',
-          responseType: 'error',
-        })
-      }
-    } catch (e) {
+    const response = await postData('./form.php', formDataJsonString)
+    if (response.ok) {
       await showAlert({
-        title: 'Ouch',
-        message: 'Something goes wrong!',
-        responseType: 'error',
+        title: 'Ваша заявка отправлена',
+        text: 'В ближайшее время мы с вами свяжемся!',
+        icon: 'success',
+        timer: 2500,
+      })
+    } else {
+      await showAlert({
+        title: 'Не удалось соединиться с сервером',
+        text: 'Извините, мы не получили ваши данные, попробуйте позже',
+        icon: 'error',
+        footer: 'Наш телефон:&emsp;<a class="contacts__link" href="tel:+7(917)274-01-92">+7 (917) 274-01-92</a>',
       })
     }
-  }))
+  }
+
+  callbackForm.addEventListener('submit', throttle(1000, false, callbackFormSubmitHandler))
 }
 
 export default submitForm
