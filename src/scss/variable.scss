@@ -1,9 +1,15 @@
-$mobile-header-height: 65px;
-$desktop-header-height: 95px;
+// Media Sizes
 $mobile-plus: 576px;
 $tablet: 768px;
 $laptop: 992px;
 $desktop: 1200px;
+
+// retina
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$mobile-header-height: 65px;
+$desktop-header-height: 95px;
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 $primary: #2F343A;

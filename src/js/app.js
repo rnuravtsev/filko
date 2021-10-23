@@ -9,6 +9,7 @@ import 'bootstrap/scss/bootstrap.scss'
 import '@fancyapps/ui/src/Fancybox/Fancybox.scss'
 import 'swiper/swiper.scss'
 import 'swiper/components/pagination/pagination.scss'
+import 'sweetalert2/src/sweetalert2.scss'
 import '../scss/style.scss'
 
 import createDefaultSwiper from './modules/slider'

@@ -1,5 +1,5 @@
 .modal {
-  padding: 50px;
+  padding: 30px;
   max-width: 600px;
   height: auto;
   background-color: $primary;
@@ -26,11 +26,28 @@
   }
 }
 
-// Чтобы swal мог перекрывать, установим z-index > 1030 x < 10000
+// Чтобы swal мог перекрывать, установим z-index > 1030 && < 10000
 .fancybox-container.fancybox-is-open {
   z-index: 1040;
 }
 
 .modal.cookie-agreement-content {
   padding: 50px 15px;
+}
+
+.swal2-popup {
+  background-color: $primary;
+}
+
+.swal2-title,
+.swal2-html-container,
+.swal2-footer {
+  color: $white;
+  text-align: center;
+}
+
+@media (min-width: $tablet) {
+  .modal {
+    padding: 50px;
+  }
 }

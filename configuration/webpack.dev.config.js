@@ -1,8 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const { merge } = require('webpack-merge');
+const { merge } = require('webpack-merge')
 
-const webpackConfiguration = require('../webpack.config');
-const environment = require('./environment');
+const webpackConfiguration = require('../webpack.config')
+const environment = require('./environment')
 
 module.exports = merge(webpackConfiguration, {
   mode: 'development',
@@ -35,4 +35,4 @@ module.exports = merge(webpackConfiguration, {
 
   /* Additional plugins configuration */
   plugins: [],
-});
+})
