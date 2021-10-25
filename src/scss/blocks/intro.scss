@@ -21,8 +21,12 @@
     background-color: rgba(0, 0, 0, 0.75);
   }
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  @media (min-resolution: $retina-dpi-2x) {
     background-image: url("../images/design/intro-man-truck-400w@2x.webp");
+  }
+
+  @media (min-resolution: $retina-dpi-3x) {
+    background-image: url("../images/design/intro-man-truck-400w@3x.webp");
   }
 }
 
@@ -32,10 +36,11 @@
 }
 
 .intro__title {
-  text-align: center;
+  margin-top: 0;
   margin-bottom: 25px;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 700;
+  text-align: center;
 }
 
 .intro__subtitle {
@@ -70,9 +75,14 @@
   .intro {
     background-image: url('../images/design/intro-man-truck-800w.webp');
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi-2x) {
       background-image: url("../images/design/intro-man-truck-800w@2x.webp");
     }
+
+    @media (min-resolution: $retina-dpi-3x) {
+      background-image: url("../images/design/intro-man-truck-800w@3x.webp");
+    }
+
     &__title {
       font-size: 30px;
     }
@@ -84,9 +94,14 @@
     background-image: url('../images/design/intro-man-truck.webp');
     height: calc(100vh - $desktop-header-height);
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../images/design/intro-man-truck@2x.webp");
+    @media (min-resolution: $retina-dpi-2x) {
+      background-image: url("../images/design/intro-man-truck-1200w@2x.webp");
     }
+
+    @media (min-resolution: $retina-dpi-3x) {
+      background-image: url("../images/design/intro-man-truck-1200w@3x.webp");
+    }
+
   }
   .intro__title {
     font-size: 45px;

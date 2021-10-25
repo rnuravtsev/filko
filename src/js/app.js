@@ -2,6 +2,7 @@ import 'popper.js'
 import 'bootstrap/dist/js/bootstrap.min'
 import Inputmask from 'inputmask/lib/inputmask'
 
+import window from 'inputmask/lib/global/window'
 import submitForm from './modules/submitForm'
 import validateForm from './modules/validateForm'
 
@@ -19,7 +20,11 @@ import cookie from './modules/cookie'
 document.querySelectorAll('a[href^="#"]').forEach((el) => {
   el.addEventListener('click', function (evt) {
     evt.preventDefault()
-    customScroll(el.attributes.href.value)
+    if (window.screen.width < 768) {
+      customScroll(el.attributes.href.value, -250)
+    } else {
+      customScroll(el.attributes.href.value)
+    }
   })
 })
 

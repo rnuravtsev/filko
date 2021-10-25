@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <base href="/">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="ru">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
     <title>Filko</title>
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
 </head>
 
 <body>
@@ -14,7 +18,7 @@
 <div class="fill fill--white w-100 header-wrapper">
     <header
             class="page-header container page-header__nav main-nav navbar navbar-expand-xl align-items-center justify-content-between">
-        <img class="page-header__logo logo" src="images/content/logo-filco.svg" alt="Логотип компании Filko">
+        <img class="page-header__logo logo" src="images/content/logo-filko.svg" alt="Логотип компании Filko">
         <div class="d-none d-lg-flex align-items-center">
             <svg class="page-header__icon page-header__icon--phone" width="20" height="20">
                 <use xlink:href="images/sprite.svg#sprite-icon-phone"></use>
@@ -54,12 +58,6 @@
                 <li class="main-nav__item nav-item">
                     <a class="main-nav__link" href="#rates">Тарифы</a>
                 </li>
-                <!--        <li class="main-nav__item nav-item">-->
-                <!--          <a class="main-nav__link" href="#docs">Документы</a>-->
-                <!--        </li>-->
-                <!--        <li class="main-nav__item nav-item">-->
-                <!--          <a class="main-nav__link" href="#autopark">Автопарк</a>-->
-                <!--        </li>-->
                 <li class="main-nav__item nav-item">
                     <a class="main-nav__link" href="#contacts">Контакты</a>
                 </li>
@@ -72,7 +70,7 @@
         <div class="col-12">
             <section class="intro section" id="intro">
                 <div class="intro__wrapper">
-                    <h2 class="intro__title">Транспортная компания ООО "Филко"</h2>
+                    <h1 class="intro__title">Транспортная компания ООО&nbsp;"Филко"</h1>
                     <h3 class="intro__subtitle">Надёжно. Качественно. В срок.</h3>
                 </div>
                 <a class="intro__link" href="#about">
@@ -87,7 +85,7 @@
 </div>
 <div class="container">
     <section class="about section row" id="about">
-        <div class="col-12 col-lg-5">
+        <div class="col-12 col-lg-6">
             <h2 class="about__title title title--section">О компании</h2>
             <p class="about__text">
                 На сегодняшний день ООО "Филко" является динамичной и стабильно развивающейся транспортно-экспедиционной
@@ -105,19 +103,16 @@
                 до клиентов за счет ежедневных отгрузок.
             </p>
         </div>
-        <div class="col-12 col-lg-7">
-            <ul class="about__list row no-gutters">
-                <li class="about__item col-6 col-md-4 order-1 order-md-1">
+        <div class="col-12 col-lg-6">
+            <ul class="about__list">
+                <li class="about__item about__item--office">
                     <div class="about__decor decor">
                         <strong class="decor__number">6</strong>
                         <p class="decor__text">офисов</p>
-                        <div class="mt-auto">
-                            <p class="decor__text decor__text--small mb-0">По России</p>
-                        </div>
-                        <div class="mt-auto"></div>
+                        <p class="decor__text decor__text--small mb-0">По России</p>
                     </div>
                 </li>
-                <li class="about__item col-6 col-md-4 order-4 order-md-2">
+                <li class="about__item about__item--truck">
                     <div class="about__decor decor">
                         <strong class="decor__number">61</strong>
                         <p class="decor__text">грузовик</p>
@@ -128,23 +123,14 @@
                         </div>
                     </div>
                 </li>
-                <li class="about__item col-6 col-md-4 order-2 order-md-3">
-                    <div class="about__decor decor decor--image">
-                        <img src="../images/content/about-decor.webp" alt="">
-                    </div>
+                <li class="about__item about__item--logo">
+                    <div class="decor decor--bg decor--primary-light"></div>
                 </li>
-                <li class="about__item col-6 col-md-4 order-3 order-md-4">
-                    <div class="about__decor decor decor--image">
-                        <img src="../images/content/about-decor.webp" alt="">
-                    </div>
-                </li>
-                <li class="about__item col-6 col-md-4 order-5">
+                <li class="about__item about__item--staff">
                     <div class="about__decor decor">
                         <strong class="decor__number">150</strong>
                         <p class="decor__text">сотрудников</p>
-                        <div class="mt-auto">
-                            <p class="decor__text decor__text--small mb-0">профессионалов</p>
-                        </div>
+                        <p class="decor__text decor__text--small mb-0">профессионалов</p>
                     </div>
                 </li>
             </ul>
@@ -155,7 +141,7 @@
     <section class="features section section-pattern section-pattern--center" id="features">
         <h2 class="features__title title title--section">Преимущества</h2>
         <ul class="features__list row no-gutters">
-            <li class="features__item col-6 col-sm-6 col-lg-4">
+            <li class="features__item col-6 col-lg-4">
 
                 <div class="features__decor">
                     <svg class="features__icon">
@@ -164,7 +150,7 @@
                 </div>
                 <h3 class="features__subtitle">Современный автопарк</h3>
             </li>
-            <li class="features__item col-6 col-sm-6 col-lg-4">
+            <li class="features__item col-6 col-lg-4">
 
                 <div class="features__decor">
                     <svg class="features__icon">
@@ -173,7 +159,7 @@
                 </div>
                 <h3 class="features__subtitle">Страхование ответственности перевозчика</h3>
             </li>
-            <li class="features__item col-6 col-sm-6 col-lg-4">
+            <li class="features__item col-6 col-lg-4">
 
                 <div class="features__decor">
                     <svg class="features__icon">
@@ -182,7 +168,7 @@
                 </div>
                 <h3 class="features__subtitle">Индивидуальный подход к каждому клиенту</h3>
             </li>
-            <li class="features__item col-6 col-sm-6 col-lg-4">
+            <li class="features__item col-6 col-lg-4">
 
                 <div class="features__decor">
                     <svg class="features__icon">
@@ -191,7 +177,7 @@
                 </div>
                 <h3 class="features__subtitle">Отслеживание груза (GPS трекинг) 24 часа</h3>
             </li>
-            <li class="features__item col-6 col-sm-6 col-lg-4">
+            <li class="features__item col-6 col-lg-4">
 
                 <div class="features__decor">
                     <svg class="features__icon">
@@ -209,28 +195,46 @@
         <div class="consumers__swiper swiper-container">
             <ul class="consumers__slider swiper-wrapper">
                 <li class="swiper-slide">
-                    <img class="consumers__image" src="../images/content/logo-magnit.webp" alt="Магнит">
+                    <picture>
+                        <source type="image/webp" srcset="../images/content/logo-magnit.webp 1x, ../images/content/logo-magnit@2x.webp 2x, ../images/content/logo-magnit@3x.webp 3x">
+                        <img class="consumers__image" src="../images/content/logo-magnit.png" srcset="../images/content/logo-magnit@2x.png 2x, ../images/content/logo-magnit@3x.png 3x" alt="Магнит" width="1200" height="226" loading="lazy">
+                    </picture>
                 </li>
                 <li class="swiper-slide">
-                    <img class="consumers__image" src="../images/content/db-schenker.webp" alt="DB Schenker">
+                    <picture>
+                        <source type="image/webp" srcset="../images/content/db-schenker.webp 1x, ../images/content/db-schenker@2x.webp 2x, ../images/content/db-schenker@3x.webp 3x">
+                        <img class="consumers__image" src="../images/content/db-schenker.png" srcset="../images/content/db-schenker@2x.png 2x, ../images/content/db-schenker@3x.png 3x" alt="DB Schenker" width="1127" height="221" loading="lazy">
+                    </picture>
                 </li>
                 <li class="swiper-slide">
-                    <img class="consumers__image" src="../images/content/fm-logistic.webp" alt="ФМ Логистик">
+                    <picture>
+                        <source type="image/webp" srcset="../images/content/fm-logistic.webp 1x, ../images/content/fm-logistic@2x.webp 2x, ../images/content/fm-logistic@3x.webp 3x">
+                        <img class="consumers__image" src="../images/content/fm-logistic.png" srcset="../images/content/fm-logistic@2x.png 2x, ../images/content/fm-logistic@3x.png 3x" alt="ФМ Логистик" width="1516" height="297" loading="lazy">
+                    </picture>
                 </li>
                 <li class="swiper-slide">
                     <img class="consumers__image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKwAAABQCAYAAACEYZ66AAAJH0lEQVR4Xu1d23XcNhB1Cf6IFs5XUoJLcAlrrfOddJB0kHSQdKB04HSgElSCSlAJzA5F8gyG4GK49wILSrzn3A+fXQKzM8DMxYPyhw+N4HDqHsJ993xr/njf/aRsegqnrruSz/r33d13vyW+s4ZRe6BtOL92/2h7PPjh2H2ZtbOOT7bNm+A8UP5OGHcLToPi07H7OfG5mzIBo9946h7td1bxvvuDZRuJLx+P3Uf9G3Pok9K8HT+VD26Gw33358ywW1FlDXHO7PMV/PSt+zK2xRhg0gbLNhb1b/TgPGBfbBtrqH1wEzQ1WM+8O3afJ9uwksuWA1EpBG1j8lHbdQlnm4+J59fQ3VcRtDZYwy4HrqJXFqBy4NN50ts2q+FswO/WoJtzK3LgbKf9/KZ06EoZ1LPnVvJmcuDu1P1qjWmBWg70OwaJ7zhZVA6AtpVgtlQTfJDtowjufuk+J4xpgdMgg2002z2w3lQZDLatEHOLrwBKopvIAXE2ukosRi0HwJKrS9eblwMDz+uRv0YbLRg+8OpkGnqj2ytlE4lywJZvSAsn2ntOfKcFvmg7NVA5YBewxdH6YA1MOWAWIKgc0KWQcEpUlEuyIIBy4HDsjrbNYtjAYC0mBwRSKhHq9tBtoQr8rn56j2F34BHgrM1ioAzW1+cfLxHVxUQ5UHQlC9rW22cnBDpBDVcf1TaF8Dqg7I9axaUyowEOWJocKLmSZciBpdIK+i/iUh/NAw3+wGg/MwX4uK+gHGCCIAcWfXn42v2b+P5VLOmDokCDL/SsDtFAlpIDqF3BDDDQtou+JOxkjLQ+OEq/AOtla9TBQo8cAPspJgdAu6LMz5ADl3zJ2CcVWh8c0B2SCzZTgQZ/4GIJGwEHkigH9GIDtusUl1bJNvbzlcz6Ep5gJ/qBSdZmGtDgCyVItl0LNJBEOfAf065APixw+RLXsZEcQMeAx2YaUAcLPeUA7IcmB+zKGLQrOnygZGuHL9HTKCsHUB94bKYADf7AxWO+EWggZQ9ybAvMBpGtqF3C2nJAgPajbSaMAZfNFIDB7+kpB0wHI9nA2oraFeYrbWiP1NqXAuGuqrX5IfEdNz0204AEfzLYsfkM9jNpRDQb2NIF2hWV1gO6xyztOUrrLgdA2nYt4LKrNCJYEaLSBdt1upkc+J541k1tM8EHLpspAIM/Mlpxp4AG8r3IAb1tt4RdDiSMWENbXlIA+ykmB9ABxpYDettuCa3JAY/NFKDBH5m77QOXnEJygDHAdjngs5kCMPgjs3IA7YclB2y5JQywqbQSyvTsInkKhNMoqhywPi0KKPgDbXlJAeyHJgds6WLKAbRM9+05bk2h/dh4wT5w2EwBGvyROYPhfnhyIDo6RQMvNHIAKtPB+QfTAnhfOToswH3gspkCMPgjo/KSAtoPTQ7M39tCB9gkhRhywGa+FArIAcwHDglDAxT8gR4ng/3Q5IAe+OwBRshU2UolQPvRNlN84LCZAjT4I3MGw/2oGQwuDqLMggZeqHdGAlim5Xlt3xLke4ln3STLAZfNFKBlemDWYBlwiefcZMkBWwkCGPig5AChTM/sS4HQTxQv+XfiO256bKYBCf4agw/Y7fVJDqB7hXrgEwK/eTlA8YHDZgrgMj0wZzDqFHOC9GA/X0G2HIiuJgYwU8nzur0lyPcSz7q5WTkABn9k1uC3KgfEf2Nb6KQUWvtSIPSzywHbrgUoByYHo3JAL44IgY+uURIyVbZSCeB+1OKV4QOPzRSgwR+ZMxh1CksO6GwogANvX+MGM5U8r9tbgnwv8aybuxzIAHUKSw7YS+UBDPxG5UB0GgVWPpfNNCDBX2NwwAYGSw5E2ZAQ+OhqIjophblbbgK4n/cuB+RFQHHiJdpn1rCUHEAXgWF+NRHKVMFxy00QsMkfVyt8/91lMwVI8GuSJQcSF7WhAfYW5ADiT6HHZhpQYytxE3KAkKmyr8QL4Kqg5ABh/91lMwVg8KtxK3IAnfzWviWgVUFXK8SfQq/NFKDG1iJLDtiL2khbQh0sxuS3uxcpEKoCVw7Ueo1bgBpbiUXkAKEU2v8a9MF+vpKu0gpXBSUHQH8KI58WBcHYKmTJAR0oAUFv7nLAaTMFqLG1yJIDdp8QaaunesmOMfk9pXWXAwkjGiNLDkztENrqSZYDrtK6y4HGyZIDdp8QaWugPdaE3jD1llY0yWxWDhD0WxU2KwfiV3SOs89X0lNaCYtE6iSzOy5FAQesDpuVA8xMFZylFU4y+rAAPCYPTpspIMzUKtyCHGC8YeotrWiSMZMMeo1b/wHp4oBnaiVGb58CwbI3n5C2hHoCEDJVdTnAmGRWYhUFGjDh4XUv8PESQY003f5BSrjNXkhbIyNdDd6YCs7SCicZrhyo91ddCDO1Z26GofuFLDlgjzqRtgZOehj9jT2dfzANTTLMSWYlVlHAM/WVU/ZbAtoPSQ7MsheY9elywLPSJiSZKSMyJlkuWVEBBH+izVopgP0UkQOU7SdipgqJCZUCWhX0AokwyaIdl6IgzFRh1snIIBPqLIZkaruYQQMfNioHov9wD5xkm5MDNmulgA6MEnKAsjImywFPaUUnf1B+YEwyj800AMF3G0wYGJMcQCqCnVjsARbATBWcK2108ussLjsFs8/XcXNyIGswOjBYcsAuZtCN8kD+I296m+kS0CRjLuhg1xK3Jgc8Bgcs87yUkAOMARZNJDxTZSuVYJcDCSNWMLvY6uWA9KOZOFBIsS9930gvxjmz17VAM1VwVCqB+EAmytU8Ul+OnCpMcUDBH2g1YWkgDi6ZCSiZSmXrWkATVlWbkeBPBhccBCkADnZlr2she5qJPlexti8ZCcvexygKIPgjXyTDFuZ0GAE6+CnRNkSyL59Em9ZkIC44iwMMfjVGm9uEikDklLG34ks2PSebNDQW/CVGCzpCFqNRa7eN+JJN16vnNLQU/EVy/2wOldFhwRZ8SaaVREXRWvCXGA2KtrLYJAcGLWg/f/Pc5cCc1PfkmdRyQDKN/fwdMLv3TkVLwV/kLgea5S4HEmxYDkxbOe9VDtjrmUXRWPCXuMuBdrnLgRkblgOkSzib5S4HEtzlQLvc5cCcuxxol7scmHGXA82yqhw443/H+7hqq4ED2wAAAABJRU5ErkJggg==" alt="Alidi">
                 </li>
                 <li class="swiper-slide">
-                    <img class="consumers__image" src="../images/content/borjomi.webp" alt="Боржоми">
+                    <picture>
+                        <source type="image/webp" srcset="../images/content/borjomi.webp 1x, ../images/content/borjomi@2x.webp 2x, ../images/content/borjomi@3x.webp 3x">
+                        <img class="consumers__image" src="../images/content/borjomi.png" srcset="../images/content/borjomi@2x.png 2x, ../images/content/borjomi@3x.png 3x" alt="Боржоми" width="1262" height="236">
+                    </picture>
                 </li>
                 <li class="swiper-slide">
-                    <img class="consumers__image consumers__image--danone" src="../images/content/dannon.webp" alt="Dannon">
+                    <picture>
+                        <source type="image/webp" srcset="../images/content/dannon.webp 1x, ../images/content/dannon@2x.webp 2x, ../images/content/dannon@3x.webp 3x">
+                        <img class="consumers__image" src="../images/content/dannon.png" srcset="../images/content/dannon@2x.png 2x, ../images/content/dannon@3x.png 3x" alt="Dannon" width="500" height="500">
+                    </picture>
                 </li>
                 <li class="swiper-slide">
-                    <img class="consumers__image consumers__image--agrotorg" src="../images/content/agrotorg.svg" alt="Агроторг">
+                    <img class="consumers__image consumers__image--agrotorg" src="../images/content/agrotorg.svg">
                 </li>
                 <li class="swiper-slide">
-                    <img class="consumers__image consumers__image--akashevo" src="../images/content/akashevo.webp" alt="Акашево">
+                    <picture>
+                        <source type="image/webp" srcset="../images/content/akashevo.webp 1x, ../images/content/akashevo@2x.webp 2x, ../images/content/akashevo@3x.webp 3x">
+                        <img class="consumers__image" src="../images/content/akashevo.png" srcset="../images/content/akashevo@2x.png 2x, ../images/content/akashevo@3x.png 3x" alt="Акашево" width="400" height="400">
+                    </picture>
                 </li>
             </ul>
         </div>
@@ -340,7 +344,9 @@
                         </svg>
                         <div class="d-flex flex-column">
                             <h3 class="contacts__subtitle">Адрес:</h3>
-                            <p>420126, г. Казань, ул. Ямашева 83</p>
+                            <a class="contacts__link" href="https://yandex.ru/maps/-/CCUqIYr7CB" target="_blank" rel="noreferrer noopener">
+                                420126, г. Казань, ул. Ямашева 83
+                            </a>
                         </div>
                     </li>
                     <li class="contacts__item col-12 col-sm-6 col-lg-12">
@@ -377,11 +383,7 @@
             <div class="d-none d-lg-block col-12 col-lg-6">
                 <a class="contacts__link contacts__link--map" href="https://yandex.ru/maps/-/CCUqIYr7CB" target="_blank"
                    rel="noreferrer noopener">
-                    <img class="map" src="../../images/content/bg-map.png" alt="г. Казань ул. Ямашева, 83">
-                    <!--                  <div class="map">-->
-                    <!--          <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/-/CCUU5ObrCC" width="560" height="400"-->
-                    <!--                  allowfullscreen="true" style="position:relative;"></iframe>-->
-                    <!--                  </div>-->
+                    <img class="map" src="../../images/content/bg-map.png" alt="г. Казань ул. Ямашева, 83" loading="lazy">
                 </a>
             </div>
         </div>
@@ -392,7 +394,7 @@
         <div class="d-none d-lg-block">
             <div class="row no-gutters align-items-center justify-content-center justify-content-lg-between">
                 <div class="col-auto d-none d-lg-block">
-                    <img class="page-footer__logo logo" src="images/content/logo-filco.svg"
+                    <img class="page-footer__logo logo" src="images/content/logo-filko.svg"
                          alt="Логотип компании Filko">
                 </div>
                 <div class="col-auto">
@@ -437,21 +439,21 @@
                     <p class="mb-0 mr-3 d-none d-md-block">Мы в социальных сетях:</p>
                     <ul class="contacts__social social row no-gutters">
                         <li class="social__item col-auto">
-                            <a class="social__link" href="https://instagram.com" target="_blank" rel="noopener">
+                            <a class="social__link" href="https://instagram.com" target="_blank" rel="noreferrer noopener">
                                 <svg class="social__icon" width="22" height="22">
                                     <use xlink:href="images/sprite.svg#sprite-icon-instagram"></use>
                                 </svg>
                             </a>
                         </li>
                         <li class="social__item col-auto">
-                            <a class="social__link" href="https://vk.com" target="_blank" rel="noopener">
+                            <a class="social__link" href="https://vk.com" target="_blank" rel="noreferrer noopener">
                                 <svg class="social__icon social__icon--vk" width="22" height="22">
                                     <use xlink:href="images/sprite.svg#sprite-icon-outline-vk"></use>
                                 </svg>
                             </a>
                         </li>
                         <li class="social__item col-auto">
-                            <a class="social__link" href="https://twitter.com" target="_blank" rel="noopener">
+                            <a class="social__link" href="https://twitter.com" target="_blank" rel="noreferrer noopener">
                                 <svg class="social__icon" width="22" height="22">
                                     <use xlink:href="images/sprite.svg#sprite-icon-outline-twitter"></use>
                                 </svg>
@@ -474,7 +476,7 @@
 </div>
 <div class="modal modal--callback" id="modal-callback">
     <h2 class="modal__title">Связаться с нами</h2>
-    <form class="modal__form form form--callback" autocomplete="on">
+    <form class="modal__form form form--callback" autocomplete="off">
         <div class="form-group form__form-group">
             <label class="d-none">
                 <input class="d-none" name="hijack">

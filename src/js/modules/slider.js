@@ -4,6 +4,18 @@ import SwiperCore, { Navigation, Pagination } from 'swiper/core'
 SwiperCore.use([Navigation, Pagination, Autoplay])
 
 const createDefaultSwiper = ({ container, pagination }) => new Swiper(container, {
+  autoplay: {
+    delay: 3000,
+  },
+  // centeredSlides: true,
+  // centeredSlidesBounds: true,
+  // loop: true,
+  speed: 750,
+  pagination: {
+    el: pagination,
+    clickable: true,
+    type: 'bullets',
+  },
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -17,17 +29,6 @@ const createDefaultSwiper = ({ container, pagination }) => new Swiper(container,
       slidesPerView: 3,
       spaceBetween: 50,
     },
-  },
-  // autoplay: {
-  //   delay: 3000,
-  // },
-  centeredSlidesBounds: true,
-  speed: 750,
-
-  pagination: {
-    el: pagination,
-    clickable: true,
-    type: 'bullets',
   },
 })
 
