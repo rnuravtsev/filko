@@ -6,6 +6,7 @@
 }
 
 .main-nav__item {
+  display: flex;
   border-bottom: $border-secondary;
   &:last-child {
     border-bottom: 0;
@@ -13,6 +14,7 @@
 }
 
 .main-nav__link {
+  width: 100%;
   color: $primary;
   &:hover {
     color: $secondary
@@ -20,6 +22,12 @@
 }
 
 @media (min-width: $tablet) {
+  .main-nav__item {
+    display: block;
+  }
+  .main-nav__link {
+    width: auto;
+  }
   .main-nav__list {
     flex-direction: row;
   }

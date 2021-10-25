@@ -97,9 +97,7 @@ module.exports = {
         ],
       },
     }),
-    new ImageminWebpWebpackPlugin({
-
-    }),
+    new ImageminWebpWebpackPlugin(),
     new CleanWebpackPlugin({
       verbose: true,
       cleanOnceBeforeBuildPatterns: ['**/*', '!stats.json'],

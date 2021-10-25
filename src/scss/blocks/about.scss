@@ -4,43 +4,65 @@
 
 .about__list {
   @include reset-list();
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-areas:
+          'office truck'
+          'logo staff';
 }
 
-.about__text {
-  text-align: justify;
-}
+.about__item {
 
-@media (min-width: $tablet) {
-  .about__item {
-    border: 0;
-    border-right: $border-secondary;
-    border-bottom: $border-secondary;
+  border: 0;
+  border-right: $border-secondary;
+  border-bottom: $border-secondary;
 
-    &:nth-child(3n) {
-      border-right: 0;
-      border-bottom: 0;
+  &:nth-child(2n) {
+    border-right: none;
+  }
+
+  &:nth-child(3n) {
+    border-bottom: 0;
+  }
+
+  &:nth-last-child(-n + 1) {
+    border-bottom: 0;
+  }
+
+  &--office {
+    grid-area: office;
+    > div {
+      border-radius: 5px 0 0 0;
     }
-
-    &:nth-last-child(-n+2) {
-      border-bottom: 0;
+  }
+  &--truck {
+    grid-area: truck;
+    > div {
+      border-radius: 0 5px 0 0;
+    }
+  }
+  &--logo {
+    grid-area: logo;
+    > div {
+      border-radius: 0 0 0 5px;
+    }
+  }
+  &--staff {
+    grid-area: staff;
+    > div {
+      border-radius: 0 0 5px 0;
     }
   }
 }
 
-@media (min-width: $laptop) {
-  .about__item {
-    &:nth-child(1) {
-      .about__decor {
-        border-radius: 5px 0 0 0;
-      }
-    }
+.about__text {
+  font-size: 18px;
+  text-align: justify;
+}
 
-    &:last-child {
-      border-right: 0;
-
-      .about__decor {
-        border-radius: 0 0 5px 0;
-      }
-    }
+@media (min-width: $tablet) {
+  .about__text {
+    font-size: 16px;
   }
 }

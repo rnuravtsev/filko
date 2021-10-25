@@ -22,24 +22,19 @@
 }
 
 .contacts__link {
+  margin-bottom: 10px;
   @include link();
   &:hover {
     @include link-hover();
   }
   &--map {
     &:hover {
-      transform: scale(1.1);
+      .contacts__hover-palace {
+        display: block;
+      }
     }
   }
 }
-
-//@media (min-width: $mobile-plus) {
-//  .contacts__icon {
-//    &--pin {
-//      width: 50px;
-//    }
-//  }
-//}
 
 @media (min-width: $laptop) {
   .contacts__icon {
