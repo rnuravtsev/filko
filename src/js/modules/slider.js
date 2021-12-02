@@ -4,12 +4,12 @@ import SwiperCore, { Navigation, Pagination } from 'swiper/core'
 SwiperCore.use([Navigation, Pagination, Autoplay])
 
 const createDefaultSwiper = ({ container, pagination }) => new Swiper(container, {
-  autoplay: {
-    delay: 3000,
-  },
+  // autoplay: {
+  //   delay: 500,
+  // },
   // centeredSlides: true,
   // centeredSlidesBounds: true,
-  // loop: true,
+  loop: true,
   speed: 750,
   pagination: {
     el: pagination,
