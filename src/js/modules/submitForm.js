@@ -32,6 +32,7 @@ const submitForm = () => {
     const showAlert = async (options) => {
       buttonSubmit.classList.remove('modal__button--loading')
       await Swal.fire({
+        showCloseButton: true,
         ...options,
       })
     }

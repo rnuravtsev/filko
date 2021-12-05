@@ -1,5 +1,5 @@
-import Swiper, { Autoplay, EffectFade } from 'swiper'
-import SwiperCore, { Navigation, Pagination } from 'swiper/core'
+import Swiper, { Autoplay, Navigation, Pagination } from 'swiper'
+import SwiperCore from 'swiper/core'
 
 SwiperCore.use([Navigation, Pagination, Autoplay])
 
@@ -7,10 +7,8 @@ const createDefaultSwiper = ({ container, pagination }) => new Swiper(container,
   // autoplay: {
   //   delay: 500,
   // },
-  // centeredSlides: true,
-  // centeredSlidesBounds: true,
-  loop: true,
-  speed: 750,
+  // loop: true,
+  // speed: 750,
   pagination: {
     el: pagination,
     clickable: true,
